@@ -12,7 +12,7 @@ class AccountService {
       //if validation is successful
       // send to accounting service
       await axios.post("account_sevice_url", data).then((res) => {
-        accountData = res;
+        accountData = res.data;
       });
       return accountData;
     } catch (err) {
